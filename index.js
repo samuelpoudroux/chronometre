@@ -33,6 +33,7 @@ function chronoStart() {
     document.chronoForm.reset.onclick = chronoReset
     start = new Date()
     chrono()
+    console.log("aaaa")
 }
 
 function chronoContinue() {
