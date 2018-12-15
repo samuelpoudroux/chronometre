@@ -69,6 +69,9 @@ var playersurname = document.querySelector("#surname");
 var temps = document.querySelector("#chronotime");
 var body = document.querySelector('body');
 button.addEventListener("click", timeregistrer);
+var playersdatas = [];
+
+
 
 
 function timeregistrer(event) {
@@ -97,6 +100,19 @@ function timeregistrer(event) {
     timeplayer.className = 'timeplayer';
     divcontentplayersdata.appendChild(timeplayer);
     timeplayer.value = `${timeregistred}`;
+
+    
+    playersdatas.push({name : newdivname.value, surname : newdivsurname.value, time : timeplayer.value});
+    console.log(playersdatas);  
+    localStorage.setItem("donneescourse",JSON.stringify(playersdatas)); 
+    
+    playersdatas = JSON.parse(localStorage.getItem("donneescourse"));
+    console.log(playersdatas);
+
+
+    var liste = document.createElement('div');
+    body.appendChild(liste);
+  
 
     var playernamesvidfunction = playersname.value = "";
     var playersurnamesfunction = playersurname.value = "";
