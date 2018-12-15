@@ -73,6 +73,7 @@ button.addEventListener("click", timeregistrer);
 
 function timeregistrer(event) {
 
+
     console.log("time")
     var playersnameregistred = playersname.value;
     var playersurnameregistred = playersurname.value;
@@ -97,8 +98,9 @@ function timeregistrer(event) {
     divcontentplayersdata.appendChild(timeplayer);
     timeplayer.value = `${timeregistred}`;
 
-    var playernamesvide = playersname.value = "";
-    var playersurnamesvide = playersurname.value = "";
+    var playernamesvidfunction = playersname.value = "";
+    var playersurnamesfunction = playersurname.value = "";
     var timevide = temps.value = "";
 
 }
+

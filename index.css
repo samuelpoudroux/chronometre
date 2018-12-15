@@ -141,7 +141,7 @@ h3 {
     }
 }
 
-@media screen and (min-width: 450px) and (max-width:1000px){
+@media screen and (min-width: 450px) and (max-width:1000px) {
 
 
 
@@ -157,3 +157,4 @@ h3 {
         padding: 15%;
     }
 }
+

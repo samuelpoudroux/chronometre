@@ -1,0 +1,6 @@
+
+@media print{
+  .outprint{ 
+      
+    display: none !important; };
+}
