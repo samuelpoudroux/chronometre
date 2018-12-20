@@ -106,10 +106,6 @@ function timeregistrer(event) {
     console.log(playersdatas);  
     localStorage.setItem("donneescourse",JSON.stringify(playersdatas)); 
     
-    playersdatas = JSON.parse(localStorage.getItem("donneescourse"));
-    console.log(playersdatas);
-
-
     var liste = document.createElement('div');
     body.appendChild(liste);
   
@@ -120,3 +116,27 @@ function timeregistrer(event) {
 
 }
 
+  function loaddata() {
+    playersdatas= JSON.parse(localStorage.getItem("donneescourse")); 
+    var i;
+
+    for (i = 0; i < playersdatas.length; i++) {
+        var divtitrewithlocalstorage = document.querySelector('.titrewithlocalstorages');
+        var localStoragediv1 = document.createElement('input');
+      divtitrewithlocalstorage.appendChild(localStoragediv1)
+      var localStoragediv2 = document.createElement('input');
+      divtitrewithlocalstorage.appendChild(localStoragediv2);
+      var localStoragediv3= document.createElement('input');
+      divtitrewithlocalstorage.appendChild(localStoragediv3);
+      localStoragediv1.value= playersdatas[i].name;
+      localStoragediv2.value= playersdatas[i].surname;
+      localStoragediv3.value= playersdatas[i].time;
+
+        
+
+    }
+  }
+  
+
+
+loaddata();
